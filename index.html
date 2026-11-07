@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SupGen — Higher Order Company</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+<link rel="icon" href="logo.png">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{background:#E9E9E9}
+body{font-family:Inter,Arial,sans-serif;padding:24px 0}
+.frame{width:min(96vw,1600px);margin:0 auto 24px;aspect-ratio:16/9;position:relative;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.12);border-radius:6px;background:#fff}
+.slide{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.slide p,.slide h1,.slide h2,.slide h3{margin:0}
+.hint{text-align:center;color:#5C5F66;font-size:14px;padding:8px 0 24px}
+</style>
+</head>
+<body>
+<div class="frame">
+<section class="slide" id="cover" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px">
+<img src="logo.png" alt="Higher Order Company logo" style="width:220px;height:169px;object-fit:contain">
+<h1 style="font-size:96px;font-weight:700;line-height:1.1;text-align:center;color:#000000">SupGen</h1>
+<p style="font-size:36px;line-height:1.3;text-align:center;color:#5C5F66;width:1200px">Verified reasoning data for the problems LLMs can’t solve</p>
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-align:center;color:#000000">Higher Order Company</p>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="problem" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:72px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs throw away their hardest problems</h2>
+<div style="display:flex;flex-direction:row;align-items:center;gap:80px">
+<p style="font-size:280px;font-weight:700;line-height:1;color:#000000">0</p>
+<div style="display:flex;flex-direction:column;gap:24px;width:1100px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">learning signal when every attempt fails</h3>
+<p style="font-size:30px;line-height:1.45;color:#5C5F66">If the model can’t solve a problem, training learns nothing from it. So labs filter those problems out.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5C5F66">Sources: “Advantage Collapse in GRPO” (2026); DAPO and Open-Reasoner-Zero filter zero-pass problems; Off-Context GRPO (2026)</p>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="market" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:96px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs already pay billions for training data</h2>
+<div style="display:flex;flex-direction:row;gap:64px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #000000;padding:32px 0 0 0">
+<p style="font-size:96px;font-weight:700;line-height:1;color:#000000">~$8.5B</p>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">per year, 50+ data and RL-environment vendors</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #000000;padding:32px 0 0 0">
+<p style="font-size:96px;font-weight:700;line-height:1;color:#000000">~$2B</p>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">per year, Mercor alone (mid-2026 run-rate)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #000000;padding:32px 0 0 0">
+<p style="font-size:96px;font-weight:700;line-height:1;color:#000000">$1B+</p>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Anthropic discussed for RL environments</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5C5F66">Sources: industry tally, Jul 2026 (rough); Mercor H1 2026 revenue $614M; The Information, Sep 2025 (discussion, not a budget)</p>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="solution" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:88px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">SupGen solves them, and proves it</h2>
+<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border:2px solid #000000;padding:36px;border-radius:16px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#000000">Hard problem</h3>
+<p style="font-size:24px;line-height:1.4;color:#5C5F66">LLMs fail on it</p>
+</div>
+<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border:2px solid #000000;padding:36px;border-radius:16px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#000000">SupGen searches</h3>
+<p style="font-size:24px;line-height:1.4;color:#5C5F66">symbolic, no LLM</p>
+</div>
+<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border:2px solid #000000;padding:36px;border-radius:16px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#000000">HVM verifies</h3>
+<p style="font-size:24px;line-height:1.4;color:#5C5F66">formal proof check</p>
+</div>
+<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#000000;border:2px solid #000000;padding:36px;border-radius:16px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#FFFFFF">Verified data</h3>
+<p style="font-size:24px;line-height:1.4;color:#D9D9D9">ready to train on</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.45;color:#5C5F66">The problems labs throw away become the data that teaches their models.</p>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="assets" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:80px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">The engine already exists</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px 96px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">SupGen</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Symbolic proof and program synthesis</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">HVM4</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Parallel runtime and proof verifier</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Bend 2</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Our language, released Sep 2026</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">512 nodes</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Cluster ready to run the search</p>
+</div>
+</div>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="business" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:72px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">We sell the data labs can’t make</h2>
+<div style="display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:row;align-items:center;gap:40px;border:2px solid #000000;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FFFFFF;background:#000000;padding:10px 24px;border-radius:999px">First</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Verified hard-problem datasets for AI labs</h3>
+</div>
+<div style="display:flex;flex-direction:row;align-items:center;gap:40px;border:2px solid #D9D9D9;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#000000;border:2px solid #000000;padding:8px 24px;border-radius:999px">Next</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Reasoning API: send a problem, get a proof</h3>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.45;color:#5C5F66">Our cost is CPU search. Their alternative is problems they can’t train on.</p>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="raise" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:72px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">We are raising $8M</h2>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">SAFE · $120M post-money cap · $100k minimum · all to R&amp;D</p>
+</div>
+<div style="display:flex;flex-direction:row;gap:64px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #000000;padding:32px 0 0 0">
+<p style="font-size:60px;font-weight:700;line-height:1;color:#000000">1</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">SupGen beyond simple types</h3>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #000000;padding:32px 0 0 0">
+<p style="font-size:60px;font-weight:700;line-height:1;color:#000000">2</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">First dataset on problems frontier models fail</h3>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;border-top:2px solid #000000;padding:32px 0 0 0">
+<p style="font-size:60px;font-weight:700;line-height:1;color:#000000">3</p>
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Paid pilot with one AI lab</h3>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5C5F66">High-risk research investment · investors@higherorderco.com</p>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="team" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:72px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">HOC Team</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:48px 96px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Victor Taelin</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Founder, CEO · created HVM, Bend and Kind</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Vitor Chiarelli Neves</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Cofounder</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Nicolas Abril</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Researcher</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Lorenzo Battistela</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Researcher</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Paulo Cavalcanti</h3>
+<p style="font-size:30px;line-height:1.4;color:#5C5F66">Researcher</p>
+</div>
+</div>
+
+</section>
+</div>
+<div class="frame">
+<section class="slide" id="vision" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<h2 style="font-size:96px;font-weight:700;line-height:1.1;color:#000000;width:1500px">The bitter lesson, taken to the extreme</h2>
+<p style="font-size:36px;line-height:1.4;color:#5C5F66;width:1400px">The simplest method plus massive compute wins. For reasoning, that method is proof search. We’re building it.</p>
+<img src="logo.png" alt="Higher Order Company logo" style="position:absolute;right:128px;bottom:96px;width:160px;height:123px;object-fit:contain">
+
+</section>
+</div>
+<p class="hint">Higher Order Company · investors@higherorderco.com</p>
+<script>
+function fit(){document.querySelectorAll('.frame').forEach(f=>{f.querySelector('.slide').style.transform='scale('+(f.clientWidth/1920)+')'})}
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
