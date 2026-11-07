@@ -28,16 +28,22 @@ body{font-family:Inter,Arial,sans-serif;padding:24px 0}
 </section>
 </div>
 <div class="frame">
-<section class="slide" id="problem" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:72px">
-<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs throw away their hardest problems</h2>
-<div style="display:flex;flex-direction:row;align-items:center;gap:80px">
-<p style="font-size:280px;font-weight:700;line-height:1;color:#000000">0</p>
-<div style="display:flex;flex-direction:column;gap:24px;width:1100px">
-<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">learning signal when every attempt fails</h3>
-<p style="font-size:30px;line-height:1.45;color:#5C5F66">If the model can’t solve a problem, training learns nothing from it. So labs filter those problems out.</p>
-</div>
-</div>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5C5F66">Sources: “Advantage Collapse in GRPO” (2026); DAPO and Open-Reasoner-Zero filter zero-pass problems; Off-Context GRPO (2026)</p>
+<section class="slide" id="problem" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column">
+<svg aria-label="Bar chart: 64 attempts generated per hard problem, 0 attempts the model learns from" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0;width:1920px;height:1080px">
+<path d="M720,360 H1484 Q1492,360 1492,368 V472 Q1492,480 1484,480 H720 Z" fill="#000000"/>
+<line x1="720" x2="720" y1="330" y2="720" stroke="#000000" stroke-width="3"/>
+<rect x="720" y="580" width="6" height="120" fill="#C92A2A"/>
+</svg>
+<h2 style="position:absolute;left:128px;top:128px;width:1664px;font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs pay for attempts that teach nothing</h2>
+<p style="position:absolute;left:128px;top:372px;width:560px;font-size:36px;font-weight:700;line-height:1.2;color:#000000">Attempts generated</p>
+<p style="position:absolute;left:128px;top:420px;width:560px;font-size:24px;line-height:1.3;color:#5C5F66">per hard problem, all paid compute</p>
+<p style="position:absolute;left:1516px;top:372px;width:200px;font-size:96px;font-weight:700;line-height:1;color:#000000">64</p>
+<p style="position:absolute;left:128px;top:592px;width:560px;font-size:36px;font-weight:700;line-height:1.2;color:#000000">Attempts it learns from</p>
+<p style="position:absolute;left:128px;top:640px;width:560px;font-size:24px;line-height:1.3;color:#5C5F66">when every attempt fails</p>
+<p style="position:absolute;left:752px;top:592px;width:120px;font-size:96px;font-weight:700;line-height:1;color:#C92A2A">0</p>
+<p style="position:absolute;left:880px;top:620px;width:600px;font-size:36px;font-weight:700;line-height:1.2;color:#C92A2A">all 64 attempts wasted</p>
+<p style="position:absolute;left:128px;top:792px;width:1664px;font-size:30px;line-height:1.4;color:#000000">In one 2026 study, a 7B model failed all 64 attempts on <b>595 math problems</b>. Every one of those attempts was thrown away.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5C5F66">Why: in RL training (GRPO), when every attempt fails, all rewards are zero and the update is exactly zero. So labs filter these problems out (DAPO, Open-Reasoner-Zero). Source: Off-Context GRPO, arXiv 2607.19313.</p>
 
 </section>
 </div>
@@ -91,24 +97,28 @@ body{font-family:Inter,Arial,sans-serif;padding:24px 0}
 </section>
 </div>
 <div class="frame">
-<section class="slide" id="assets" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:80px">
-<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">The engine already exists</h2>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px 96px">
-<div style="display:flex;flex-direction:column;gap:12px">
-<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">SupGen</h3>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">Symbolic proof and program synthesis</p>
+<section class="slide" id="assets" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:64px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">Most of the engine already exists</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:16px;background:#EBFBEE;border:3px solid #0A820A;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0A820A">What we’ll build</p>
+<h3 style="font-size:44px;font-weight:700;line-height:1.2;color:#000000">SupGen</h3>
+<p style="font-size:30px;line-height:1.4;color:#3D4045">Symbolic proof and program synthesis</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">HVM4</h3>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">Parallel runtime that runs the search</p>
+<div style="display:flex;flex-direction:column;gap:16px;background:#E7F5FF;border:3px solid #1971C2;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1971C2">Already have</p>
+<h3 style="font-size:44px;font-weight:700;line-height:1.2;color:#000000">HVM4</h3>
+<p style="font-size:30px;line-height:1.4;color:#3D4045">Parallel runtime that runs the search</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Bend 2</h3>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">Our language and proof verifier</p>
+<div style="display:flex;flex-direction:column;gap:16px;background:#E7F5FF;border:3px solid #1971C2;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1971C2">Already have</p>
+<h3 style="font-size:44px;font-weight:700;line-height:1.2;color:#000000">Bend 2</h3>
+<p style="font-size:30px;line-height:1.4;color:#3D4045">Our language and proof verifier</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">512 nodes</h3>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">Cluster ready to run the search</p>
+<div style="display:flex;flex-direction:column;gap:16px;background:#E7F5FF;border:3px solid #1971C2;padding:40px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1971C2">Already have</p>
+<h3 style="font-size:44px;font-weight:700;line-height:1.2;color:#000000">512 nodes</h3>
+<p style="font-size:30px;line-height:1.4;color:#3D4045">Cluster ready to run the search</p>
 </div>
 </div>
 
