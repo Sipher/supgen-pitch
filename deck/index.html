@@ -17,7 +17,7 @@ body{font-family:var(--sans);color:var(--ink);padding:24px 0}
 .slide>*{position:absolute}
 .eyebrow{left:128px;top:112px;font-size:28px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--soft)}
 .title{left:128px;top:160px;width:1664px;font-family:var(--serif);font-size:72px;font-weight:700;line-height:1.15}
-.card{background:var(--card);border-radius:20px;display:flex;align-items:center;justify-content:center}
+.card{background:var(--card);border:1.5px solid rgba(35,31,32,.14);border-radius:20px;display:flex;align-items:center;justify-content:center}
 .card img{display:block;max-width:100%;max-height:100%;object-fit:contain}
 .lead{font-size:40px;font-weight:700;line-height:1.3}
 .hint{text-align:center;color:var(--muted);font-size:14px;padding:8px 0 24px}
@@ -68,22 +68,31 @@ html,body{background:none;padding:0}
 <div class="frame"><section class="slide" id="solution">
 <p class="eyebrow">Solution</p>
 <h2 class="title">An AI architecture that generalizes</h2>
-<div class="card" style="left:128px;top:320px;width:880px;height:450px;padding:32px">
-<img src="chung.png" alt="Chart: performance versus compute; less structure overtakes more structure as compute grows" style="width:816px;height:386px">
+<div class="card" style="left:128px;top:300px;width:816px;height:540px;padding:40px">
+<img src="chung.png" alt="Chart: performance versus compute; less structure overtakes more structure as compute grows" style="width:736px;height:348px">
 </div>
-<p style="left:128px;top:790px;width:940px;font-size:22px;color:var(--soft)">Figure: H. W. Chung, “Don’t teach. Incentivize.”, MIT EI Seminar, 2024, slide 9.</p>
-<div style="left:1088px;top:320px;width:704px;border-left:4px solid var(--ink);padding-left:40px">
+<div class="card" style="left:976px;top:300px;width:816px;height:540px;padding:48px 56px;flex-direction:column;align-items:flex-start;justify-content:center;gap:28px">
 <p style="font-family:var(--serif);font-style:italic;font-size:30px;line-height:1.5">“The story of deep learning is this: empirically, old simple methods, which were usually invented in the 80s and the 90s, when scaled up on very large clusters, work really well. That happened with computer vision, that happened with normal supervised learning, and it also happened with RL.”</p>
-<p style="margin-top:24px;font-size:24px;color:var(--muted)">— <b style="color:var(--ink)">Ilya Sutskever</b>, co-founder of OpenAI and SSI, in a talk</p>
+<p style="font-size:24px;color:var(--muted)">— <b style="color:var(--ink)">Ilya Sutskever</b>, co-founder of OpenAI and SSI, in a talk</p>
 </div>
-<p class="lead" style="left:128px;top:900px;width:1664px">We’ll scale Symbolic AI to GPU clusters using HVM and Bend</p>
+<p style="left:128px;top:856px;width:816px;font-size:22px;color:var(--soft)">Figure: H. W. Chung, “Don’t teach. Incentivize.”, MIT EI Seminar, 2024, slide 9.</p>
+<p class="lead" style="left:128px;top:930px;width:1664px">We’ll scale Symbolic AI to GPU clusters using HVM and Bend</p>
 </section></div>
 
 <!-- 4. Business model -->
 <div class="frame"><section class="slide" id="business">
 <p class="eyebrow">Business model</p>
 <h2 class="title">We sell useful intelligence</h2>
-<img src="tweet.png" alt="Post by Elon Musk, @elonmusk, Jun 18, 2026: Anthropic has rightly focused on maximizing useful intelligence, which does not show up in benchmarks, but definitely shows up in revenue." style="left:410px;top:340px;width:1100px;height:404px;border-radius:20px;box-shadow:0 4px 24px rgba(35,31,32,.10)">
+<div class="card" style="left:360px;top:320px;width:1200px;padding:56px 64px;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:36px">
+<div style="display:flex;align-items:center;gap:28px">
+<img src="avatar.png" alt="" style="width:104px;height:104px;border-radius:50%;object-fit:cover">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:34px;font-weight:700">Elon Musk</p>
+<p style="font-size:26px;color:var(--muted)">@elonmusk · Jun 18, 2026</p>
+</div>
+</div>
+<p style="font-size:42px;line-height:1.4">Anthropic has rightly focused on maximizing useful intelligence, which does not show up in benchmarks, but definitely shows up in revenue.</p>
+</div>
 <p class="lead" style="left:128px;top:880px;width:1664px">If research works, business is straightforward</p>
 </section></div>
 
