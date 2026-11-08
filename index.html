@@ -49,51 +49,43 @@ body{font-family:Inter,Arial,sans-serif;padding:24px 0}
 </section>
 </div>
 <div class="frame">
-<section class="slide" id="solution" style="background:#EEE9E8;color:#231F20;font-family:'Inter', Arial, sans-serif;padding:128px 128px 96px;display:flex;flex-direction:column;gap:0px">
-<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:60px;font-weight:700;line-height:1.15;color:#231F20">SupGen turns those problems<br>into verified data.</h2>
-<div style="height:72px"></div>
-<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:40px;font-weight:700;line-height:1.2;color:#231F20;padding:0 0 0 40px">Today with an LLM</p>
-<div style="height:40px"></div>
-<div style="display:flex;flex-direction:row;align-items:center;gap:20px;padding:0 0 0 40px">
-<div style="flex:none;width:290px;height:104px;display:flex;flex-direction:column;justify-content:center;background:#FFFFFF;padding:0 28px;border-radius:12px">
-<p style="font-size:28px;font-weight:600;line-height:1.2;color:#5C5F66">Novel problem</p>
-</div>
-<svg aria-label="arrow" width="84" height="16" viewBox="0 0 84 16"><line x1="0" y1="8" x2="80" y2="8" stroke="#9C8FE8" stroke-width="3"/><path d="M72,1 L81,8 L72,15" fill="none" stroke="#9C8FE8" stroke-width="3"/></svg>
-<div style="flex:none;width:290px;height:104px;display:flex;flex-direction:column;justify-content:center;background:#FFFFFF;padding:0 28px;border-radius:12px">
-<p style="font-size:28px;font-weight:600;line-height:1.2;color:#5C5F66">LLM tries on GPUs</p>
-</div>
-<svg aria-label="arrow" width="84" height="16" viewBox="0 0 84 16"><line x1="0" y1="8" x2="80" y2="8" stroke="#9C8FE8" stroke-width="3"/><path d="M72,1 L81,8 L72,15" fill="none" stroke="#9C8FE8" stroke-width="3"/></svg>
-<div style="flex:none;width:290px;height:104px;display:flex;flex-direction:column;justify-content:center;background:#FFFFFF;padding:0 28px;border-radius:12px">
-<p style="font-size:28px;font-weight:600;line-height:1.2;color:#5C5F66">Every attempt fails</p>
-</div>
-<svg aria-label="arrow" width="84" height="16" viewBox="0 0 84 16"><line x1="0" y1="8" x2="80" y2="8" stroke="#9C8FE8" stroke-width="3"/><path d="M72,1 L81,8 L72,15" fill="none" stroke="#9C8FE8" stroke-width="3"/></svg>
-<div style="flex:none;width:290px;height:104px;display:flex;flex-direction:column;justify-content:center;background:#FFFFFF;border:4px solid #D9480F;padding:0 28px;border-radius:12px">
-<p style="font-size:28px;font-weight:700;line-height:1.2;color:#D9480F">× No data</p>
-</div>
-</div>
-<div style="height:88px"></div>
-<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:40px;font-weight:700;line-height:1.2;color:#231F20;padding:0 0 0 40px">With SupGen</p>
-<div style="height:40px"></div>
-<div style="display:flex;flex-direction:row;align-items:center;gap:20px;padding:0 0 0 40px">
-<div style="flex:none;width:290px;height:240px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:#FFFFFF;padding:28px;border-radius:16px">
+<section class="slide" id="solution" style="background:#EEE9E8;color:#231F20;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column">
+<svg aria-label="One novel problem splits into two paths: the LLM path ends with no data, the SupGen path ends with verified data" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0;width:1920px;height:1080px">
+<path d="M468,610 H514 V445 H550" fill="none" stroke="#9C8FE8" stroke-width="3" opacity="0.5"/>
+<path d="M542,437 L552,445 L542,453" fill="none" stroke="#9C8FE8" stroke-width="3" opacity="0.5"/>
+<path d="M468,610 H514 V780 H550" fill="none" stroke="#9C8FE8" stroke-width="3"/>
+<path d="M542,772 L552,780 L542,788" fill="none" stroke="#9C8FE8" stroke-width="3"/>
+<line x1="920" y1="445" x2="990" y2="445" stroke="#9C8FE8" stroke-width="3" opacity="0.5"/>
+<path d="M982,437 L992,445 L982,453" fill="none" stroke="#9C8FE8" stroke-width="3" opacity="0.5"/>
+<line x1="920" y1="780" x2="990" y2="780" stroke="#9C8FE8" stroke-width="3"/>
+<path d="M982,772 L992,780 L982,788" fill="none" stroke="#9C8FE8" stroke-width="3"/>
+<line x1="1360" y1="780" x2="1430" y2="780" stroke="#9C8FE8" stroke-width="3"/>
+<path d="M1422,772 L1432,780 L1422,788" fill="none" stroke="#9C8FE8" stroke-width="3"/>
+</svg>
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;position:absolute;left:128px;top:112px;width:1664px;font-size:60px;font-weight:700;line-height:1.15;color:#231F20">SupGen turns those problems<br>into verified data.</h2>
+<div style="position:absolute;left:128px;top:520px;width:340px;height:180px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:#FFFFFF;padding:0 32px;border-radius:16px">
 <h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#231F20">Novel problem</h3>
-<p style="font-size:24px;line-height:1.35;color:#3D4045">The same one the LLM failed</p>
+<p style="font-size:24px;line-height:1.35;color:#5C5F66">Outside what today’s models can solve</p>
 </div>
-<svg aria-label="arrow" width="84" height="16" viewBox="0 0 84 16"><line x1="0" y1="8" x2="80" y2="8" stroke="#9C8FE8" stroke-width="3"/><path d="M72,1 L81,8 L72,15" fill="none" stroke="#9C8FE8" stroke-width="3"/></svg>
-<div style="flex:none;width:290px;height:240px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:#FFFFFF;padding:28px;border-radius:16px">
+<p style="position:absolute;left:560px;top:318px;width:800px;font-family:'Libre Baskerville', Georgia, serif;font-size:32px;font-weight:700;line-height:1.2;color:#9A9597">Today with an LLM</p>
+<div style="position:absolute;left:560px;top:390px;width:360px;height:110px;display:flex;flex-direction:column;justify-content:center;background:#F7F4F3;padding:0 32px;border-radius:16px">
+<h3 style="font-size:30px;font-weight:600;line-height:1.2;color:#9A9597">LLM tries on GPUs</h3>
+</div>
+<div style="position:absolute;left:1000px;top:390px;width:360px;height:110px;display:flex;flex-direction:column;justify-content:center;background:#FFFFFF;border:3px solid #D9480F;padding:0 32px;border-radius:16px">
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#D9480F">× No data</h3>
+</div>
+<p style="position:absolute;left:560px;top:612px;width:800px;font-family:'Libre Baskerville', Georgia, serif;font-size:32px;font-weight:700;line-height:1.2;color:#231F20">With SupGen</p>
+<div style="position:absolute;left:560px;top:680px;width:360px;height:200px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:#FFFFFF;padding:0 32px;border-radius:16px">
 <h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0A820A">SupGen searches</h3>
-<p style="font-size:24px;line-height:1.35;color:#3D4045">Symbolic search on CPUs, <b>no LLM</b></p>
+<p style="font-size:24px;line-height:1.35;color:#5C5F66">Symbolic search on CPUs, <b>no LLM</b></p>
 </div>
-<svg aria-label="arrow" width="84" height="16" viewBox="0 0 84 16"><line x1="0" y1="8" x2="80" y2="8" stroke="#9C8FE8" stroke-width="3"/><path d="M72,1 L81,8 L72,15" fill="none" stroke="#9C8FE8" stroke-width="3"/></svg>
-<div style="flex:none;width:290px;height:240px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:#FFFFFF;padding:28px;border-radius:16px">
+<div style="position:absolute;left:1000px;top:680px;width:360px;height:200px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:#FFFFFF;padding:0 32px;border-radius:16px">
 <h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#231F20">Bend verifies</h3>
-<p style="font-size:24px;line-height:1.35;color:#3D4045">Every solution is <b>formally checked</b></p>
+<p style="font-size:24px;line-height:1.35;color:#5C5F66">Every solution is <b>formally checked</b></p>
 </div>
-<svg aria-label="arrow" width="84" height="16" viewBox="0 0 84 16"><line x1="0" y1="8" x2="80" y2="8" stroke="#9C8FE8" stroke-width="3"/><path d="M72,1 L81,8 L72,15" fill="none" stroke="#9C8FE8" stroke-width="3"/></svg>
-<div style="flex:none;width:290px;height:240px;display:flex;flex-direction:column;justify-content:center;gap:12px;background:#FFFFFF;border:4px solid #2B8A3E;padding:28px;border-radius:16px">
+<div style="position:absolute;left:1440px;top:680px;width:352px;height:200px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:#FFFFFF;border:4px solid #2B8A3E;padding:0 32px;border-radius:16px">
 <h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#2B8A3E">✓ Verified data</h3>
-<p style="font-size:24px;line-height:1.35;color:#3D4045">Ready for labs to train on</p>
-</div>
+<p style="font-size:24px;line-height:1.35;color:#5C5F66">Ready for labs to train on</p>
 </div>
 
 </section>
