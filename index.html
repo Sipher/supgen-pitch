@@ -30,69 +30,82 @@ body{font-family:Inter,Arial,sans-serif;padding:24px 0}
 <div class="frame">
 <section class="slide" id="problem" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column">
 <svg aria-label="Bar chart: 64 attempts generated per hard problem, 0 attempts the model learns from" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0;width:1920px;height:1080px">
-<path d="M720,360 H1484 Q1492,360 1492,368 V472 Q1492,480 1484,480 H720 Z" fill="#000000"/>
-<line x1="720" x2="720" y1="330" y2="720" stroke="#000000" stroke-width="3"/>
-<rect x="720" y="580" width="6" height="120" fill="#C92A2A"/>
+<path d="M720,320 H1484 Q1492,320 1492,328 V432 Q1492,440 1484,440 H720 Z" fill="#000000"/>
+<line x1="720" x2="720" y1="290" y2="660" stroke="#000000" stroke-width="3"/>
+<rect x="720" y="530" width="6" height="110" fill="#C92A2A"/>
 </svg>
 <h2 style="position:absolute;left:128px;top:128px;width:1664px;font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs pay for attempts that teach nothing</h2>
-<p style="position:absolute;left:128px;top:372px;width:560px;font-size:36px;font-weight:700;line-height:1.2;color:#000000">Attempts generated</p>
-<p style="position:absolute;left:128px;top:420px;width:560px;font-size:24px;line-height:1.3;color:#5C5F66">per hard problem, all paid compute</p>
-<p style="position:absolute;left:1516px;top:372px;width:200px;font-size:96px;font-weight:700;line-height:1;color:#000000">64</p>
-<p style="position:absolute;left:128px;top:592px;width:560px;font-size:36px;font-weight:700;line-height:1.2;color:#000000">Attempts it learns from</p>
-<p style="position:absolute;left:128px;top:640px;width:560px;font-size:24px;line-height:1.3;color:#5C5F66">when every attempt fails</p>
-<p style="position:absolute;left:752px;top:592px;width:120px;font-size:96px;font-weight:700;line-height:1;color:#C92A2A">0</p>
-<p style="position:absolute;left:880px;top:620px;width:600px;font-size:36px;font-weight:700;line-height:1.2;color:#C92A2A">all 64 attempts wasted</p>
-<p style="position:absolute;left:128px;top:792px;width:1664px;font-size:30px;line-height:1.4;color:#000000">In one 2026 study, a 7B model failed all 64 attempts on <b>595 math problems</b>. Every one of those attempts was thrown away.</p>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5C5F66">Why: in RL training (GRPO), when every attempt fails, all rewards are zero and the update is exactly zero. So labs filter these problems out (DAPO, Open-Reasoner-Zero). Source: Off-Context GRPO, arXiv 2607.19313.</p>
+<p style="position:absolute;left:128px;top:332px;width:560px;font-size:36px;font-weight:700;line-height:1.2;color:#000000">Attempts generated</p>
+<p style="position:absolute;left:128px;top:380px;width:560px;font-size:24px;line-height:1.3;color:#5C5F66">per hard problem, all paid compute</p>
+<p style="position:absolute;left:1516px;top:332px;width:200px;font-size:96px;font-weight:700;line-height:1;color:#000000">64</p>
+<p style="position:absolute;left:128px;top:542px;width:560px;font-size:36px;font-weight:700;line-height:1.2;color:#000000">Attempts it learns from</p>
+<p style="position:absolute;left:128px;top:590px;width:560px;font-size:24px;line-height:1.3;color:#5C5F66">595 such problems in one 2026 study</p>
+<p style="position:absolute;left:752px;top:542px;width:120px;font-size:96px;font-weight:700;line-height:1;color:#C92A2A">0</p>
+<p style="position:absolute;left:880px;top:570px;width:600px;font-size:36px;font-weight:700;line-height:1.2;color:#C92A2A">all 64 attempts wasted</p>
+<div style="position:absolute;left:128px;top:720px;width:1664px;display:flex;flex-direction:column;gap:12px;background:#FFF5F5;border-left:6px solid #C92A2A;padding:28px 40px">
+<p style="font-size:36px;font-weight:700;line-height:1.25;color:#000000">What it can cost: every 1% of RL compute wasted ≈ <span style="color:#C92A2A">$95M a year</span>, at one lab</p>
+<p style="font-size:24px;line-height:1.3;color:#5C5F66">~$19B OpenAI R&amp;D compute in 2026 (Epoch AI est.) × ~50% of frontier compute now spent on RL (SemiAnalysis est.) × 1%</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;line-height:1.3;color:#5C5F66">Why: when every attempt fails, the RL update is exactly zero, so labs filter these problems out. Source: Off-Context GRPO (arXiv 2607.19313)</p>
 
 </section>
 </div>
 <div class="frame">
-<section class="slide" id="market" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:96px">
-<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs already pay billions for training data</h2>
-<div style="display:flex;flex-direction:row;gap:64px">
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #000000;padding:32px 0 0 0">
-<p style="font-size:96px;font-weight:700;line-height:1;color:#000000">~$8.5B</p>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">per year, 50+ data and RL-environment vendors</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #000000;padding:32px 0 0 0">
-<p style="font-size:96px;font-weight:700;line-height:1;color:#000000">~$2B</p>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">per year, Mercor alone (mid-2026 run-rate)</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:2px solid #000000;padding:32px 0 0 0">
-<p style="font-size:96px;font-weight:700;line-height:1;color:#000000">$1B+</p>
-<p style="font-size:30px;line-height:1.4;color:#5C5F66">Anthropic discussed for RL environments</p>
-</div>
-</div>
-<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5C5F66">Sources: industry tally, Jul 2026 (rough); Mercor H1 2026 revenue $614M; The Information, Sep 2025 (discussion, not a budget)</p>
+<section class="slide" id="market" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column">
+<svg aria-label="Bars: market about 8.5 billion dollars a year, Mercor about 2 billion, Anthropic discussed 1 billion plus, our goal about 85 million a year" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute;left:0;top:0;width:1920px;height:1080px">
+<rect x="760" y="300" width="840" height="72" rx="6" fill="#A5D8FF"/>
+<rect x="760" y="440" width="198" height="72" rx="6" fill="#4DABF7"/>
+<rect x="760" y="580" width="99" height="72" rx="6" fill="#1971C2"/>
+<rect x="760" y="720" width="10" height="72" rx="3" fill="#0A820A"/>
+<line x1="760" x2="760" y1="280" y2="812" stroke="#000000" stroke-width="3"/>
+</svg>
+<h2 style="position:absolute;left:128px;top:128px;width:1664px;font-size:60px;font-weight:700;line-height:1.15;color:#000000">Labs already pay billions for training data</h2>
+<p style="position:absolute;left:128px;top:300px;width:600px;font-size:32px;font-weight:700;line-height:1.2;color:#000000">Data and RL-environment market</p>
+<p style="position:absolute;left:128px;top:342px;width:600px;font-size:24px;line-height:1.2;color:#5C5F66">per year, 50+ vendors selling to labs</p>
+<p style="position:absolute;left:1620px;top:310px;width:200px;font-size:44px;font-weight:700;line-height:1.2;color:#000000">~$8.5B</p>
+<p style="position:absolute;left:128px;top:440px;width:600px;font-size:32px;font-weight:700;line-height:1.2;color:#000000">Mercor alone</p>
+<p style="position:absolute;left:128px;top:482px;width:600px;font-size:24px;line-height:1.2;color:#5C5F66">one vendor’s run-rate, mid-2026</p>
+<p style="position:absolute;left:978px;top:450px;width:300px;font-size:44px;font-weight:700;line-height:1.2;color:#000000">~$2B</p>
+<p style="position:absolute;left:128px;top:580px;width:600px;font-size:32px;font-weight:700;line-height:1.2;color:#000000">Anthropic, RL environments</p>
+<p style="position:absolute;left:128px;top:622px;width:600px;font-size:24px;line-height:1.2;color:#5C5F66">one lab, discussed for one year</p>
+<p style="position:absolute;left:879px;top:590px;width:300px;font-size:44px;font-weight:700;line-height:1.2;color:#000000">$1B+</p>
+<p style="position:absolute;left:128px;top:720px;width:600px;font-size:32px;font-weight:700;line-height:1.2;color:#0A820A">Our goal: 1% of the market</p>
+<p style="position:absolute;left:128px;top:762px;width:600px;font-size:24px;line-height:1.2;color:#5C5F66">verified hard-problem data</p>
+<p style="position:absolute;left:790px;top:730px;width:400px;font-size:44px;font-weight:700;line-height:1.2;color:#0A820A">~$85M / year</p>
+<p style="position:absolute;left:128px;top:850px;width:1664px;font-size:30px;line-height:1.4;color:#000000">One vendor already takes about a quarter of the market. We need one percent.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#5C5F66">Sources: industry tally, Jul 2026 (rough); Mercor H1 2026 revenue $614M; The Information, Sep 2025 (discussion, not a budget). Our goal is a target, not a forecast.</p>
 
 </section>
 </div>
 <div class="frame">
-<section class="slide" id="solution" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:88px">
-<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">SupGen solves them, and proves it</h2>
-<div style="display:flex;flex-direction:row;align-items:center;gap:24px">
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border:2px solid #000000;padding:36px;border-radius:16px">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#000000">Hard problem</h3>
-<p style="font-size:24px;line-height:1.4;color:#5C5F66">LLMs fail on it</p>
+<section class="slide" id="solution" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;gap:80px">
+<h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">SupGen turns novel problems into verified data</h2>
+<div style="display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr 56px 1fr;gap:16px;align-items:stretch">
+<div style="display:flex;flex-direction:column;gap:20px;background:#F1F3F5;border:3px solid #ADB5BD;padding:40px 32px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;color:#5C5F66">STEP 1</p>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#000000">Novel problem</h3>
+<p style="font-size:26px;line-height:1.4;color:#3D4045">Outside what today’s models can solve</p>
 </div>
-<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border:2px solid #000000;padding:36px;border-radius:16px">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#000000">SupGen searches</h3>
-<p style="font-size:24px;line-height:1.4;color:#5C5F66">symbolic, no LLM</p>
+<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none;align-self:center"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
+<div style="display:flex;flex-direction:column;gap:20px;background:#EBFBEE;border:3px solid #0A820A;padding:40px 32px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;color:#0A820A">STEP 2</p>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#000000">SupGen searches</h3>
+<p style="font-size:26px;line-height:1.4;color:#3D4045">Symbolic search on CPUs, no LLM</p>
 </div>
-<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;border:2px solid #000000;padding:36px;border-radius:16px">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#000000">Bend verifies</h3>
-<p style="font-size:24px;line-height:1.4;color:#5C5F66">formal proof check</p>
+<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none;align-self:center"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
+<div style="display:flex;flex-direction:column;gap:20px;background:#E7F5FF;border:3px solid #1971C2;padding:40px 32px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;color:#1971C2">STEP 3</p>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#000000">Bend verifies</h3>
+<p style="font-size:26px;line-height:1.4;color:#3D4045">Every solution is formally checked</p>
 </div>
-<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#000000;border:2px solid #000000;padding:36px;border-radius:16px">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#FFFFFF">Verified data</h3>
-<p style="font-size:24px;line-height:1.4;color:#D9D9D9">ready to train on</p>
+<svg width="56" height="28" viewBox="0 0 56 28" style="flex:none;align-self:center"><path d="M0,9 H34 V0 L56,14 L34,28 V19 H0 Z" fill="#000000"/></svg>
+<div style="display:flex;flex-direction:column;gap:20px;background:#000000;border:3px solid #000000;padding:40px 32px;border-radius:16px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;color:#D9D9D9">RESULT</p>
+<h3 style="font-size:30px;font-weight:700;line-height:1.2;color:#FFFFFF">Verified data</h3>
+<p style="font-size:26px;line-height:1.4;color:#D9D9D9">Ready for labs to train on</p>
 </div>
 </div>
-<p style="font-size:30px;line-height:1.45;color:#5C5F66">The problems labs throw away become the data that teaches their models.</p>
+<p style="font-size:30px;line-height:1.45;color:#000000">The problems labs throw away become the data that teaches their models.</p>
 
 </section>
 </div>
@@ -137,7 +150,7 @@ body{font-family:Inter,Arial,sans-serif;padding:24px 0}
 <h3 style="font-size:36px;font-weight:700;line-height:1.3;color:#000000">Reasoning API: send a problem, get a proof</h3>
 </div>
 </div>
-<p style="font-size:30px;line-height:1.45;color:#5C5F66">Our cost is CPU search. Their alternative is problems they can’t train on.</p>
+<p style="font-size:30px;line-height:1.45;color:#5C5F66">LLM training runs on GPUs that cost a fortune. SupGen runs on CPUs, so every verified solution costs a fraction.</p>
 
 </section>
 </div>
@@ -204,7 +217,7 @@ body{font-family:Inter,Arial,sans-serif;padding:24px 0}
 <div class="frame">
 <section id="sources" class="slide" style="background:#FFFFFF;color:#000000;font-family:'Inter', Arial, sans-serif;padding:112px 128px;display:flex;flex-direction:column;gap:48px">
 <h2 style="font-size:60px;font-weight:700;line-height:1.15;color:#000000">Sources</h2>
-<div style="display:flex;flex-direction:column;gap:36px"><div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:700;color:#000000">Problem: zero learning signal on unsolved problems</h3><ul style="font-size:22px;line-height:1.35;color:#000000;padding-left:24px"><li style="margin:0 0 10px 0"><a href="https://arxiv.org/html/2605.21125v1" target="_blank" rel="noopener" style="color:#000000">Advantage Collapse in Group Relative Policy Optimization (arXiv, 2026)</a></li><li style="margin:0 0 10px 0"><a href="https://arxiv.org/html/2607.19313v1" target="_blank" rel="noopener" style="color:#000000">Off-Context GRPO: Learning to Reason on Hard Problems (arXiv, 2026)</a></li><li style="margin:0 0 10px 0"><a href="https://arxiv.org/pdf/2507.13266" target="_blank" rel="noopener" style="color:#000000">QuestA: Expanding Reasoning Capacity via Question Augmentation (arXiv)</a></li><li style="margin:0 0 10px 0"><a href="https://arxiv.org/pdf/2606.29938" target="_blank" rel="noopener" style="color:#000000">LatentRevise: Learning from Zero-Hit Reasoning (arXiv, 2026)</a></li><li style="margin:0 0 10px 0"><a href="https://www.interconnects.ai/p/papers-im-reading-base-model-rl-grpo" target="_blank" rel="noopener" style="color:#000000">Interconnects: DAPO and Open-Reasoner-Zero filter zero-pass problems</a></li></ul></div><div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:700;color:#000000">Market: what labs pay for data</h3><ul style="font-size:22px;line-height:1.35;color:#000000;padding-left:24px"><li style="margin:0 0 10px 0"><a href="https://finance.biggo.com/news/99fca087-237a-48f3-ab02-30289cb7d364" target="_blank" rel="noopener" style="color:#000000">AI training-data sector revenue (~$8.5B), BigGo Finance</a></li><li style="margin:0 0 10px 0"><a href="https://blog.pebblous.ai/blog/ai-data-supply-oligopoly/en/" target="_blank" rel="noopener" style="color:#000000">AI training-data market concentration, 50+ vendors (Pebblous)</a></li><li style="margin:0 0 10px 0"><a href="https://finance.biggo.com/news/865c23cb-3e0d-4c21-aa0d-6bf2a7fc8d1a" target="_blank" rel="noopener" style="color:#000000">Mercor H1 2026 revenue $614M, BigGo Finance</a></li><li style="margin:0 0 10px 0"><a href="https://techcrunch.com/2025/09/21/silicon-valley-bets-big-on-environments-to-train-ai-agents/" target="_blank" rel="noopener" style="color:#000000">Anthropic discussed $1B+ on RL environments (TechCrunch, citing The Information)</a></li><li style="margin:0 0 10px 0"><a href="https://epoch.ai/gradient-updates/state-of-rl-envs" target="_blank" rel="noopener" style="color:#000000">Epoch AI: an FAQ on RL environments</a></li></ul></div><div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:700;color:#000000">Engine: HVM4, SupGen, Bend 2</h3><ul style="font-size:22px;line-height:1.35;color:#000000;padding-left:24px"><li style="margin:0 0 10px 0"><a href="https://x.com/VictorTaelin/status/1971591584916393984" target="_blank" rel="noopener" style="color:#000000">Victor Taelin: SupGen built into HVM4</a></li><li style="margin:0 0 10px 0"><a href="https://akitaonrails.com/en/2026/09/19/new-ai-language-just-released-bend-2/" target="_blank" rel="noopener" style="color:#000000">Bend 2 release (Akita on Rails, Sep 2026)</a></li></ul></div></div>
+<div style="display:flex;flex-direction:column;gap:36px"><div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:700;color:#000000">Problem: zero learning signal on unsolved problems</h3><ul style="font-size:22px;line-height:1.35;color:#000000;padding-left:24px"><li style="margin:0 0 10px 0"><a href="https://arxiv.org/html/2605.21125v1" target="_blank" rel="noopener" style="color:#000000">Advantage Collapse in Group Relative Policy Optimization (arXiv, 2026)</a></li><li style="margin:0 0 10px 0"><a href="https://arxiv.org/html/2607.19313v1" target="_blank" rel="noopener" style="color:#000000">Off-Context GRPO: Learning to Reason on Hard Problems (arXiv, 2026)</a></li><li style="margin:0 0 10px 0"><a href="https://arxiv.org/pdf/2507.13266" target="_blank" rel="noopener" style="color:#000000">QuestA: Expanding Reasoning Capacity via Question Augmentation (arXiv)</a></li><li style="margin:0 0 10px 0"><a href="https://arxiv.org/pdf/2606.29938" target="_blank" rel="noopener" style="color:#000000">LatentRevise: Learning from Zero-Hit Reasoning (arXiv, 2026)</a></li><li style="margin:0 0 10px 0"><a href="https://www.interconnects.ai/p/papers-im-reading-base-model-rl-grpo" target="_blank" rel="noopener" style="color:#000000">Interconnects: DAPO and Open-Reasoner-Zero filter zero-pass problems</a></li><li style="margin:0 0 10px 0"><a href="https://www.herohunt.ai/blog/hiring-rl-environment-engineers-2026-labs-guide/" target="_blank" rel="noopener" style="color:#000000">OpenAI 2026 R&amp;D compute ~$19B, Epoch AI estimate (via HeroHunt)</a></li><li style="margin:0 0 10px 0"><a href="https://www.exobrain.co.uk/insights/the-rise-of-post-training" target="_blank" rel="noopener" style="color:#000000">RL ≈ half of frontier-lab compute, SemiAnalysis estimate (via Exobrain)</a></li></ul></div><div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:700;color:#000000">Market: what labs pay for data</h3><ul style="font-size:22px;line-height:1.35;color:#000000;padding-left:24px"><li style="margin:0 0 10px 0"><a href="https://finance.biggo.com/news/99fca087-237a-48f3-ab02-30289cb7d364" target="_blank" rel="noopener" style="color:#000000">AI training-data sector revenue (~$8.5B), BigGo Finance</a></li><li style="margin:0 0 10px 0"><a href="https://blog.pebblous.ai/blog/ai-data-supply-oligopoly/en/" target="_blank" rel="noopener" style="color:#000000">AI training-data market concentration, 50+ vendors (Pebblous)</a></li><li style="margin:0 0 10px 0"><a href="https://finance.biggo.com/news/865c23cb-3e0d-4c21-aa0d-6bf2a7fc8d1a" target="_blank" rel="noopener" style="color:#000000">Mercor H1 2026 revenue $614M, BigGo Finance</a></li><li style="margin:0 0 10px 0"><a href="https://techcrunch.com/2025/09/21/silicon-valley-bets-big-on-environments-to-train-ai-agents/" target="_blank" rel="noopener" style="color:#000000">Anthropic discussed $1B+ on RL environments (TechCrunch, citing The Information)</a></li><li style="margin:0 0 10px 0"><a href="https://epoch.ai/gradient-updates/state-of-rl-envs" target="_blank" rel="noopener" style="color:#000000">Epoch AI: an FAQ on RL environments</a></li></ul></div><div style="display:flex;flex-direction:column;gap:16px"><h3 style="font-size:28px;font-weight:700;color:#000000">Engine: HVM4, SupGen, Bend 2</h3><ul style="font-size:22px;line-height:1.35;color:#000000;padding-left:24px"><li style="margin:0 0 10px 0"><a href="https://x.com/VictorTaelin/status/1971591584916393984" target="_blank" rel="noopener" style="color:#000000">Victor Taelin: SupGen built into HVM4</a></li><li style="margin:0 0 10px 0"><a href="https://akitaonrails.com/en/2026/09/19/new-ai-language-just-released-bend-2/" target="_blank" rel="noopener" style="color:#000000">Bend 2 release (Akita on Rails, Sep 2026)</a></li></ul></div></div>
 </section>
 </div>
 <p class="hint">Higher Order Company · investors@higherorderco.com</p>
